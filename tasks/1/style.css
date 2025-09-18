@@ -1,0 +1,14 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #238DCF 0%, #53EDB2 100%);
+    --icon-gradient: linear-gradient(135deg, #00619E 0%, #53ED58 100%);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+img {
+    border-radius: 10%;
+}
+
+.hidden {
+    display: none;
+}
