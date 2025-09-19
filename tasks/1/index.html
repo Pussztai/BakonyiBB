@@ -5,12 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BBB | Bemutatkozó Weboldal</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
   </head>
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">Bemutatkozás</a>
         <button
@@ -27,10 +36,15 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#"
+                >Navigációs menü</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#">TODO-List</a>
+            </li>
+            <li class="nav-item ms-auto">
+              <div id="clock"></div>
             </li>
           </ul>
         </div>
@@ -52,8 +66,12 @@
               />
               <h5 class="card-title">Pusztai Attila</h5>
               <div class="bemutatkozás">
-                <button id="toggleBtn" aria-expanded="false">Bemutatkozás</button>
-                <p id="myPara" class="hidden">Lorem ipsum dolor, sit amet co alias.</p>
+                <button id="toggleBtnAti" class="btn" aria-expanded="false">
+                  Bemutatkozás
+                </button>
+                <p id="AtiP" class="hidden">
+                  Lorem ipsum dolor, sit amet co alias.
+                </p>
               </div>
             </div>
           </div>
@@ -68,6 +86,14 @@
                 alt=""
               />
               <h5 class="card-title">Sós Dávid</h5>
+              <div class="bemutatkozás">
+                <button id="toggleBtnDave" aria-expanded="false">
+                  Bemutatkozás
+                </button>
+                <p id="DaveP" class="hidden">
+                  Lorem ipsum dolor, sit amet co alias.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -81,11 +107,80 @@
                 alt=""
               />
               <h5 class="card-title">Kulás Dominik</h5>
+              <div class="bemutatkozás">
+                <button id="toggleBtnDomi" aria-expanded="false">
+                  Bemutatkozás
+                </button>
+                <p id="DomiP" class="hidden">
+                  Lorem ipsum dolor, sit amet co alias.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- forgokep -->
+
+      <section class="suliDescription">
+        <section class="descript">
+          <span class="szoveg1">Ceglédi SZC Közgazdasági és Informatikai Technikum</span>
+          <span class="szoveg2">2700 Cegléd, Kossuth Ferenc utca 32.</span>
+        </section>
+
+        <section class="carouselWrapper">
+          <aside class="jobbra">
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="images/suli.png"
+                    class="d-block img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img src="images/suli.png" class="d-block" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="images/suli.png"
+                    class="d-block img-fluid"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExample"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </aside>
+        </section>
+      </section>
+
+      <!-- tanari resz -->
+      <section class="Tanarok">
       <h2 class="text-center my-5">Felkészítő Tanárok</h2>
       <div class="row g-4 justify-content-center">
         <div class="col-md-4 col-sm-6">
@@ -115,15 +210,16 @@
         </div>
       </div>
     </div>
+    </section>
     <script src="script.js"></script>
   </main>
 
   <footer>
     <h3>Kapcsolatok</h3>
     <span>
-        <a href="https://github.com/coma112"><i class="bi bi-github"></i></a>
-        <a href="https://github.com/Pussztai"><i class="bi bi-github"></i></a>
-        <a href="https://github.com/SosDavidCkik"><i class="bi bi-github"></i></a>
+      <a href="https://github.com/coma112"><i class="bi bi-github"></i></a>
+      <a href="https://github.com/Pussztai"><i class="bi bi-github"></i></a>
+      <a href="https://github.com/SosDavidCkik"><i class="bi bi-github"></i></a>
     </span>
   </footer>
 
