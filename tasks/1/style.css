@@ -130,3 +130,108 @@ img {
 .Tanarok{
   margin-top: 5%;
 }
+
+
+
+
+
+
+/* footer !important */
+
+
+
+
+ 
+
+/* 
+  footer {
+    background-color: black;
+  }
+
+  footer table {
+    background-color: black;
+
+  }
+
+footer  .hatter {
+    background-color: black !important;
+    color: white;
+}
+
+.customtab a {
+color: white;
+text-decoration: none;
+}
+
+.customtab {
+  width: 60%;
+  margin-top: 10%;
+
+  
+}
+
+footer a:link {
+  text-decoration: underline;
+}
+
+
+footer a:visited {
+  color: rgb(218, 215, 215);
+}
+
+footer a {
+  color: #FFFFFF;
+}
+
+
+
+
+.table-responsive {
+  margin-left: 30%;
+background-color: black;
+} */
+
+
+
+  /* @media (max-width: 578px) {
+  .table-responsive {
+    overflow-x: auto;
+   margin-left: 10%;
+   width: 100%;
+   text-align: center;
+   align-items: center;
+   
+  }
+  .table-bordered td,
+  .table-bordered th {
+    border: none; 
+  }
+  .table-bordered td {
+    display: block; 
+  }
+  .table-bordered td:first-child {
+    border-top: none; 
+  } 
+  header {
+    width: 110%;
+  }
+  .navbar-cipo {
+    width: 100%;
+  }
+  .cipo-footer {
+    width: 80%;
+  }
+} 
+ 
+
+@media (max-width: 322px) {
+  header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 342px) {
+  header {
+    width: 100%;
+  }
+} */

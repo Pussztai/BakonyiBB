@@ -21,3 +21,4 @@
 - Navigátor => A gomboknál az ikonok a szöveg előtt legyenek!
 - Bemutatkozó oldal => Szebb designet készíteni hozzá
 - Egész Projekt => Megfelelő színállásokat találni a weboldalnak
+- Footer => Befejezni és megcsinalni responsivra is.
