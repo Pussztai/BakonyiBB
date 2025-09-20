@@ -1,91 +1,90 @@
 :root {
-  --primary-gradient: linear-gradient(135deg, #238dcf 0%, #53edb2 100%);
-  --icon-gradient: linear-gradient(135deg, #00619e 0%, #53ed58 100%);
-  --glass-bg: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.2);
+    --primary-gradient: linear-gradient(135deg, #238dcf 0%, #53edb2 100%);
+    --icon-gradient: linear-gradient(135deg, #00619e 0%, #53ed58 100%);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 .navbar {
-  /* background: linear-gradient(90deg, #f2f2f3, #dfe1e2);
+    /* background: linear-gradient(90deg, #f2f2f3, #dfe1e2);
    */
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 img {
-  border-radius: 10%;
+    border-radius: 10%;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 /* navbar MAIN OBJECT*/
 
 #clock {
-  font-weight: 600;
-  color: rgb(158, 59, 59);
-  padding: 5px 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+    font-weight: 600;
+    color: rgb(158, 59, 59);
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
 }
 
 .navbar-nav {
-  display: flex;
-  align-items: center;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .navbar-nav li:last-child {
-  margin-left: auto;
-  margin-right: 2%;
+    margin-left: auto;
+    margin-right: 2%;
 }
 
 .navbar-brand {
-  font-weight: 700;
-  font-size: 1.4rem;
-  color: rgb(158, 59, 59) !important;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: rgb(158, 59, 59) !important;
 }
 
 .navbar-nav .nav-link {
-  color: rgb(158, 59, 59) !important;
-  margin: 0 10px;
-  position: relative;
-  transition: color 0.3s;
+    color: rgb(158, 59, 59) !important;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s;
 }
 
 .navbar-nav .nav-link::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  background: rgb(158, 59, 59);
-  bottom: -5px;
-  left: 0;
-  transition: 0.3s;
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(158, 59, 59);
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
 }
 
 .navbar-nav .nav-link:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 .carousel {
-  margin-top: 5%;
+    margin-top: 5%;
 }
 
 /* forgokep MAIN OBJECT */
 
-
 .suliDescription {
-  margin-top: 3%;
-  display: flex;
-  align-items: center; 
-  /* gap: 0px; távolság a kettő között */
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    /* gap: 0px; távolság a kettő között */
 }
 
 .suliDescription .descript {
-  max-width: 300px;
-  padding-left: 8%;
+    max-width: 300px;
+    padding-left: 8%;
 }
 
 /* .suliDescription .szoveg1 {
@@ -96,80 +95,109 @@ img {
 } */
 
 .suliDescription .carouselWrapper {
-  flex: 1;
+    flex: 1;
 }
 
 .suliDescription aside.jobbra {
-  flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
-  .suliDescription {
-    flex-direction: column; 
-    align-items: center; 
-  }
+    .suliDescription {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .suliDescription .descript {
-    max-width: 100%;
-    text-align: center; 
-    margin-bottom: 15px;
-  }
+    .suliDescription .descript {
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 }
 
 .carousel-item3 {
-  object-fit: cover;
+    object-fit: cover;
 }
 
 .jobbra {
-  margin-left: 25%;
+    margin-left: 25%;
 }
-
 
 /* tanarok MAIN OBJECT */
 
-.Tanarok{
-  margin-top: 5%;
+.Tanarok {
+    margin-top: 5%;
 }
-
-
-
-
-
 
 /* footer !important */
 
-
-
-
-
 footer {
     background-color: black;
-    
-  }
-
+}
 
 footer table {
     background-color: black;
+}
 
-  }
-
-footer  .hatter {
+footer .hatter {
     background-color: black !important;
     color: white !important;
-    
 }
 
-footer th{
-  text-align: center;
+footer th {
+    text-align: center;
 }
 
-footer td{
-  margin-left: 20%;
+footer td {
+    margin-left: 20%;
 }
 
+.table-responsive {
+    display: flex;
+    justify-content: center;
+}
 
+.customtab {
+    margin: 0 auto;
+    width: auto;
+    min-width: 400px;
+}
 
- 
+.customtab th {
+    text-align: center;
+    padding: 15px 30px;
+    font-weight: 600;
+}
+
+/* sorok */
+.customtab td {
+    padding: 12px 30px;
+    vertical-align: middle;
+}
+
+/* nevek */
+.customtab td:first-child {
+    text-align: left;
+    padding-right: 50px;
+}
+
+/* Github linkek */
+.customtab td:last-child {
+    text-align: right;
+    padding-left: 50px;
+}
+
+/* Footer kozepre */
+footer {
+    text-align: center;
+}
+
+/*Kapcsolatok kozepre*/
+.customtab th {
+    text-align: center !important;
+    padding: 15px 30px;
+    font-weight: 600;
+}
 
 /* 
   footer {
@@ -219,9 +247,7 @@ footer a {
 background-color: black;
 } */
 
-
-
-  /* @media (max-width: 578px) {
+/* @media (max-width: 578px) {
   .table-responsive {
     overflow-x: auto;
    margin-left: 10%;
