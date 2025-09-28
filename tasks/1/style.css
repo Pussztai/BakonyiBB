@@ -69,83 +69,303 @@ img {
     width: 100%;
 }
 
-.carousel {
-    margin-top: 5%;
+
+
+
+
+body {      
+            overflow-x: hidden;
+            /* background: linear-gradient(135deg, #2c313f 0%, #d8d5db 100%); */
+            background: linear-gradient(135deg, #fdf6ec 0%, #fdf6ec 100%);;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card {
+            background: white;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+            position: relative;
+            height: auto !important; 
+        }
+        
+        .row.g-4 {
+            align-items: flex-start; 
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .competitor1Img {
+            width: 160px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #f8f9fa;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+        }
+
+        .bemutatkozás button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .bemutatkozás button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            color: white;
+        }
+
+        .bemutatkozás p {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        h2 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            padding: 4rem 0;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        /* @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        } */
+
+        @media (max-width: 768px) {
+            .competitor1Img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .card-title {
+                font-size: 1.3rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tobbkep */
+.extraKepek{
+   margin: 5% auto 0 auto; 
+  background: #f4e1c6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* forgokep MAIN OBJECT */
 
-.suliDescriptionWrapper{
-background-color: #FEF3E2;
-width: 100%;
-/* padding: 50px 30px 104px 400px; */
-height: 70%;
+.extraKepek:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
 
+
+#kepHely img{
+  width: 800px;  
+    height: auto;  
+    border-radius: 10px; 
+
+    image-rendering: crisp-edges;   
+  image-rendering: pixelated;     
+}
+
+
+/* suli kep */
+
+.vetites{
+  /* display: flex; */
+  justify-content: center;
+}
+
+
+#kepHely{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.wrapper{
+  margin: 10% auto;
+  width: 100%;
+  max-width: 1150px;
+}
+
+.school-card{
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  position: relative;
+  overflow: visible;
+}
+
+.info{
+  flex: 1 1 55%;
+  min-width: 0;
+}
+
+.info h1{
+  margin: 0 0 .6rem 0;
+  /* font-size: cla; */
+  line-height: 1.05;
+  font-weight: 700;
+  color: #1f2937;
+  letter-spacing: -0.02em;
+}
+
+.info p {
+  margin: 0;
+  color: #6b7280;
+
+}
+
+.kep{
+  flex: 0 0 420px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kep img{
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(6, 38, 71, 0.12);
+  display: block;
+  border: 6px solid rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width:850px){
+  .school-card{
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.25rem;
+  }
+  .kep{
+    order: -1;
+    width: 100%;
+    flex: none;
+    display: block;
+  }
+  .kep img{
+    max-width: 100%;
+    border-radius: 16px;
+    border-width: 5px;
+  }
+  .info h1{
+    font-size: 1.5rem;
+  }
+}
+
+.strip{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -14px;
+  height: 12px;
+  border-radius: 12px 12px 0 0;
+  opacity: 0.95;
 }
 
 
 
-.suliDescription {
-    margin: 3% 16% auto;
-    margin-top: 3%;
-    display: flex;
-    align-items: center;
-    
-    
-    /* gap: 0px; távolság a kettő között */
-    
-}
 
-.suliDescription .descript {
-    max-width: 300px;
-    padding-left: 8%;
-}
 
-/* .suliDescription .szoveg1 {
-  padding-left: 40%;
-}
-.suliDescription .szoveg2 {
-  padding-left: 10%;
-} */
 
-.carouselWrapper{
-  margin-top: -2%;
-}
-.suliDescription .carouselWrapper {
-    flex: 1;
-}
 
-.suliDescription aside.jobbra {
-    flex-shrink: 0;
-}
 
-@media (max-width: 768px) {
-    .suliDescription {
-        flex-direction: column;
-        align-items: center;
-    }
 
-    .suliDescription .descript {
-        max-width: 100%;
-        text-align: center;
-        margin-bottom: 15px;
-    }
 
-    .hatter {
-    padding: 6px 25px !important;
-}
-}
+
 @media (max-width: 425px) {
   .customtab td:first-child {
-    padding-right: 10px !important; /* kisebb */
+    padding-right: 10px !important; 
   }
 
   .customtab td:last-child {
-    padding-left: 10px !important; /* kisebb */
+    padding-left: 10px !important; 
   }
 
   .hatter {
-    padding: 6px 10px !important; /* kisebb  margó */
+    padding: 6px 10px !important; 
   }
 }
 
@@ -168,7 +388,9 @@ height: 70%;
 
 /* footer !important */
 
+
 footer {
+
   margin-top: 3%;
     background-color: black;
 }
@@ -191,6 +413,8 @@ footer td {
 }
 
 .table-responsive {
+                
+
     display: flex;
     justify-content: center;
 }
@@ -206,6 +430,7 @@ footer td {
     padding: 15px 30px;
     font-weight: 600;
 }
+
 
 
 
