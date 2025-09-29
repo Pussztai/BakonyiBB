@@ -50,7 +50,7 @@ const kepHely = document.getElementById("kepHely");
 const descript = document.getElementById("diaPictureDescription")
 
 const kepek = [
-    "images/image.png",
+    "images/erasmus.png",
     "https://via.placeholder.com/200x150?text=Kép+2",
     "https://via.placeholder.com/200x150?text=Kép+3"
   ];
