@@ -7,9 +7,51 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    /* background: linear-gradient(135deg, #fdf6ec 0%, #fdf6ec 100%);; */
     min-height: 100vh;
     padding: 20px;
 }
+
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-nav li:last-child {
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: rgb(158, 59, 59) !important;
+}
+
+.navbar-nav .nav-link {
+    color: rgb(158, 59, 59) !important;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: rgb(158, 59, 59);
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
 
 /* fő container */
 .container {

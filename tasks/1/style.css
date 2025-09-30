@@ -1,221 +1,197 @@
 :root {
-    --primary-gradient: linear-gradient(135deg, #238dcf 0%, #53edb2 100%);
-    --icon-gradient: linear-gradient(135deg, #00619e 0%, #53ed58 100%);
-    --glass-bg: rgba(255, 255, 255, 0.15);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --warm: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%, #FF7F50 0%)
+  --primary-gradient: linear-gradient(135deg, #238dcf 0%, #53edb2 100%);
+  --icon-gradient: linear-gradient(135deg, #00619e 0%, #53ed58 100%);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --warm: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%, #FF7F50 0%);
 }
 
+/* NAVBAR */
 .navbar {
-    /* background: linear-gradient(90deg, #f2f2f3, #dfe1e2);
-   */
-    background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 img {
-    border-radius: 10%;
+  border-radius: 10%;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-/* navbar MAIN OBJECT*/
-
+/* Clock */
 #clock {
-    font-weight: 600;
-    color: rgb(158, 59, 59);
-    padding: 5px 15px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+  font-weight: 600;
+  color: rgb(158, 59, 59);
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
 
 .navbar-nav {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .navbar-nav li:last-child {
-    margin-left: auto;
-    margin-right: 2%;
+  margin-left: auto;
+  margin-right: 2%;
 }
 
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: rgb(158, 59, 59) !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: rgb(158, 59, 59) !important;
 }
 
 .navbar-nav .nav-link {
-    color: rgb(158, 59, 59) !important;
-    margin: 0 10px;
-    position: relative;
-    transition: color 0.3s;
+  color: rgb(158, 59, 59) !important;
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s;
 }
 
 .navbar-nav .nav-link::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background: rgb(158, 59, 59);
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s;
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: rgb(158, 59, 59);
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
 }
 
 .navbar-nav .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
+}
+
+/* BODY */
+body {
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #fdf6ec 0%, #fdf6ec 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  height: auto !important;
+}
+
+.row.g-4 {
+  align-items: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.competitor1Img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f8f9fa;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.bemutatkozás button {
+  background: var(--warm);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.bemutatkozás button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  color: white;
+}
+
+.bemutatkozás p {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  color: #5a6c7d;
+  line-height: 1.6;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  padding: 4rem 0;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--warm);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
 }
 
 
+/*  CARD */
+@media (max-width: 768px) {
+  .competitor1Img {
+    width: 100px;
+    height: 100px;
+  }
 
+  .card-title {
+    font-size: 1.3rem;
+  }
 
+  h2 {
+    font-size: 2rem;
+  }
+}
 
-body {      
-            overflow-x: hidden;
-            /* background: linear-gradient(135deg, #2c313f 0%, #d8d5db 100%); */
-            background: linear-gradient(135deg, #fdf6ec 0%, #fdf6ec 100%);;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .card {
-            background: white;
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            overflow: hidden;
-            position: relative;
-            height: auto !important; 
-        }
-        
-        .row.g-4 {
-            align-items: flex-start; 
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .card-body {
-            padding: 2rem;
-        }
-
-        .competitor1Img {
-            width: 160px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid #f8f9fa;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            margin-bottom: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 1.5rem;
-        }
-
-        .bemutatkozás button {
-            background: var(--warm);
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 25px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .bemutatkozás button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
-            color: white;
-        }
-
-        .bemutatkozás p {
-            margin-top: 1rem;
-            padding: 1rem;
-            background: #f8f9fa;
-            border-radius: 15px;
-            color: #5a6c7d;
-            line-height: 1.6;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        h2 {
-            text-align: center;
-            color: white;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .container {
-            padding: 4rem 0;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--warm);
-            background-size: 200% 100%;
-            animation: shimmer 3s ease-in-out infinite;
-        }
-
-        /* @keyframes shimmer {
-            0% { background-position: -200% 0; }
-            100% { background-position: 200% 0; }
-        } */
-
-        @media (max-width: 768px) {
-            .competitor1Img {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .card-title {
-                font-size: 1.3rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* tobbkep */
-.extraKepek{
-   margin: 5% auto 0 auto; 
+/* EXTRA KEPEK */
+.extraKepek {
+  margin: 5% auto 0 auto;
   background: #f4e1c6;
-  color: white;
+  color: rgb(156, 155, 155);
   border: none;
   padding: 12px 24px;
   font-size: 16px;
@@ -226,47 +202,53 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 .extraKepek:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-
-#kepHely img{
-  width: 800px;  
-    height: auto;  
-    border-radius: 10px; 
-
-    image-rendering: crisp-edges;   
-  image-rendering: pixelated;     
+#kepHely img {
+  width: 800px;
+  height: auto;
+  border-radius: 10px;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
-
-/* suli kep */
-
-.vetites{
-   display: flex;
+/* SULI KEP */
+.vetites {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
-#kepHely{
+#kepHely {
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+@media (max-width: 675px) {
+  #kepHely {
+    width: 80%;
+  }
 
-.wrapper{
+  #kepHely img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+.wrapper {
   margin: 10% auto;
   width: 100%;
   max-width: 1150px;
 }
 
-.school-card{
+.school-card {
   display: flex;
   align-items: center;
   gap: 2.5rem;
@@ -278,12 +260,12 @@ body {
   overflow: visible;
 }
 
-.info{
+.info {
   flex: 1 1 55%;
   min-width: 0;
 }
 
-.info h1{
+.info h1 {
   margin: 0 0 .6rem 0;
   /* font-size: cla; */
   line-height: 1.05;
@@ -295,16 +277,15 @@ body {
 .info p {
   margin: 0;
   color: #6b7280;
-
 }
 
-.kep{
+.kep {
   flex: 0 0 420px;
   display: flex;
   justify-content: flex-end;
 }
 
-.kep img{
+.kep img {
   width: 100%;
   height: auto;
   max-width: 420px;
@@ -315,29 +296,32 @@ body {
   border: 6px solid rgba(255, 255, 255, 0.8);
 }
 
-@media (max-width:850px){
-  .school-card{
+@media (max-width: 850px) {
+  .school-card {
     flex-direction: column;
     padding: 2rem;
     gap: 1.25rem;
   }
-  .kep{
+
+  .kep {
     order: -1;
     width: 100%;
     flex: none;
     display: block;
   }
-  .kep img{
+
+  .kep img {
     max-width: 100%;
     border-radius: 16px;
     border-width: 5px;
   }
-  .info h1{
+
+  .info h1 {
     font-size: 1.5rem;
   }
 }
 
-.strip{
+.strip {
   position: absolute;
   left: 0;
   right: 0;
@@ -349,226 +333,118 @@ body {
 
 
 
-
-
-
-
-
-
-
-
+/* FOOTER */
 @media (max-width: 625px) {
-  footer{
-    overflow-x: hidden;
+  footer {
+    overflow-x: auto;
   }
+
   .customtab td:first-child {
-    padding-right: 10px !important; 
+    padding-right: 10px !important;
   }
 
   .customtab td:last-child {
-    padding-left: 10px !important; 
-  }
-
-  .hatter {
-    padding: 6px 20px !important; 
+    padding-left: 10px !important;
   }
 }
 
+@media (max-width: 578px) {
+  .table-responsive {
+    overflow-x: auto;
+    margin-left: 10%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+}
 
 .carousel-item3 {
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .jobbra {
-    margin-left: 25%;
+  margin-left: 25%;
 }
 
-
-
-/* tanarok MAIN OBJECT */
-
+/* TANAROK */
 .Tanarok {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
-/* footer !important */
-
-
+/* FOOTER STYLING */
 footer {
-
   margin-top: 3%;
-    background-color: black;
-    overflow-x: hidden;
+  background-color: black;
+  overflow-x: hidden;
 }
 
 footer table {
-    background-color: black;
+  background-color: black;
 }
 
 footer .hatter {
-    background-color: black !important;
-    color: white !important;
+  background-color: black !important;
+  color: white !important;
 }
 
 footer th {
-    text-align: center;
+  text-align: center;
 }
 
 footer td {
-    margin-left: 20%;
+  margin-left: 20%;
 }
 
 .table-responsive {
-                
-
-    display: flex;
-    justify-content: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .customtab {
-    margin: 0 auto;
-    width: auto;
-    min-width: 400px;
+  margin: 0 auto;
+  width: auto;
+  min-width: 400px;
 }
 
 .customtab th {
-    text-align: center;
-    padding: 15px 30px;
-    font-weight: 600;
+  text-align: center;
+  padding: 15px 30px;
+  font-weight: 600;
 }
-
-
-
 
 /* sorok */
 .customtab td {
-    padding: 12px 30px;
-    vertical-align: middle;
+  padding: 12px 30px;
+  vertical-align: middle;
 }
-
-/* .hatter {
-    padding: 6px 205px !important;
-} */
-
-
 
 /* nevek */
 .customtab td:first-child {
-    text-align: left;
-    padding-right: 50px;
+  text-align: left;
+  padding-right: 50px;
 }
 
 /* Github linkek */
 .customtab td:last-child {
-    text-align: right;
-    padding-left: 50px;
+  text-align: right;
+  padding-left: 50px;
 }
 
 .hatter {
-    padding: 6px 200px !important; /* fixált, kisebb padding */
-    white-space: nowrap;          /* ne törje a szöveget */
+  padding: 6px 200px !important; /* fixált, kisebb padding */
+  white-space: normal;
 }
 
-
-/* Footer kozepre */
+/* Footer középre */
 footer {
-    text-align: center;
+  text-align: center;
 }
 
-/*Kapcsolatok kozepre*/
+/* Kapcsolatok középre */
 .customtab th {
-    text-align: center !important;
-    padding: 15px 30px;
-    font-weight: 600;
+  text-align: center !important;
+  padding: 15px 30px;
+  font-weight: 600;
 }
-
-/* 
-  footer {
-    background-color: black;
-  }
-
-  footer table {
-    background-color: black;
-
-  }
-
-footer  .hatter {
-    background-color: black !important;
-    color: white;
-}
-
-.customtab a {
-color: white;
-text-decoration: none;
-}
-
-.customtab {
-  width: 60%;
-  margin-top: 10%;
-
-  
-}
-
-footer a:link {
-  text-decoration: underline;
-}
-
-
-footer a:visited {
-  color: rgb(218, 215, 215);
-}
-
-footer a {
-  color: #FFFFFF;
-}
-
-
-
-
-.table-responsive {
-  margin-left: 30%;
-background-color: black;
-} */
-
-/* @media (max-width: 578px) {
-  .table-responsive {
-    overflow-x: auto;
-   margin-left: 10%;
-   width: 100%;
-   text-align: center;
-   align-items: center;
-   
-  }
-  .table-bordered td,
-  .table-bordered th {
-    border: none; 
-  }
-  .table-bordered td {
-    display: block; 
-  }
-  .table-bordered td:first-child {
-    border-top: none; 
-  } 
-  header {
-    width: 110%;
-  }
-  .navbar-cipo {
-    width: 100%;
-  }
-  .cipo-footer {
-    width: 80%;
-  }
-} 
- 
-
-@media (max-width: 322px) {
-  header {
-    width: 100%;
-  }
-}
-
-@media (max-width: 342px) {
-  header {
-    width: 100%;
-  }
-} */
