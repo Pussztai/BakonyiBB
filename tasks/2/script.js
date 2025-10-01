@@ -29,11 +29,20 @@ function addTask(e) {
   if (text) {
     const task = {
       id: Date.now(),
-      text: text
+      text: text,
+      completed: false 
     };
 
     tasks.push(task);
     input.value = '';
+    renderTasks();
+  }
+}
+
+function toggleTask(id) {
+  const task = tasks.find(t => t.id === id);
+  if (task) {
+    task.completed = !task.completed;
     renderTasks();
   }
 }
@@ -72,10 +81,18 @@ function renderTasks() {
     const li = document.createElement("li");
     li.classList.add("todo-item");
 
+
+  if (task.completed) {
+      li.classList.add("completed");
+    }
+
+
     const span = document.createElement("span");
     span.classList.add("task-text");
     span.textContent = task.text; 
 
+    span.addEventListener("click", () => toggleTask(task.id));
+    span.style.cursor = "pointer";
 
     const upBtn = document.createElement("button");
     upBtn.textContent = "⬆️";

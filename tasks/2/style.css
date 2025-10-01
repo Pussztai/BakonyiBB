@@ -12,6 +12,13 @@ body {
     padding: 20px;
 }
 
+/* Elvegzett feladatok athuzasa a todo-ban */
+.todo-item.completed .task-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+  color: red;
+}
+
 #clock {
   font-weight: 600;
   color: rgb(158, 59, 59);

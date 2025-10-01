@@ -1,5 +1,3 @@
-
-
 const toggleButtons = [
         { btnId: 'toggleBtnAti', targetId: 'AtiP' },
         { btnId: 'toggleBtnDave', targetId: 'DaveP' },
