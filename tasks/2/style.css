@@ -12,6 +12,13 @@ body {
     padding: 20px;
 }
 
+#clock {
+  font-weight: 600;
+  color: rgb(158, 59, 59);
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
 
 .navbar-nav {
     display: flex;
@@ -53,38 +60,43 @@ body {
 }
 
 
-/* fő container */
+li .todo-item span{
+    color: #d32f2f;
+}
+
+.task-text{
+    font-size: larger;
+}
+
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(20px);
+    max-width: 480px; 
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
     border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    padding: 25px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
 }
 
 h1 {
     color: white;
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 2rem;
+    margin-bottom: 25px;
+    font-size: 1.9rem;
+    font-weight: 600;
 }
 
 .navbar {
-    /* background: linear-gradient(90deg, #f2f2f3, #dfe1e2);
-   */
     background-color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 10px 20px;
 }
-/* navbar MAIN OBJECT*/
 
-#clock {
-    font-weight: 600;
-    color: rgb(158, 59, 59);
-    padding: 5px 15px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: rgb(158, 59, 59) !important;
 }
 
 .navbar-nav {
@@ -95,20 +107,13 @@ h1 {
 
 .navbar-nav li:last-child {
     margin-left: auto;
-    margin-right: 2%;
-}
-
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: rgb(158, 59, 59) !important;
 }
 
 .navbar-nav .nav-link {
     color: rgb(158, 59, 59) !important;
-    margin: 0 10px;
+    margin: 0 8px;
     position: relative;
-    transition: color 0.3s;
+    transition: color 0.25s;
 }
 
 .navbar-nav .nav-link::after {
@@ -117,7 +122,7 @@ h1 {
     width: 0%;
     height: 2px;
     background: rgb(158, 59, 59);
-    bottom: -5px;
+    bottom: -4px;
     left: 0;
     transition: 0.3s;
 }
@@ -126,64 +131,106 @@ h1 {
     width: 100%;
 }
 
-
-/* a, feladat: form styling*/
+/* form */
 form {
     display: flex;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
+#emptyState {
+    display: flex;
+    justify-content: center; 
+    height: 50px;          
+    text-align: center;     
+}
+
+
 input {
+    width: 250px;
     flex: 1;
-    padding: 12px;
+    padding: 10px;
     border: none;
     border-radius: 8px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255, 255, 255, 0.15);
     color: white;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 input::placeholder {
-    color: rgba(255,255,255,0.7);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 button {
-    padding: 12px 20px;
-    background: rgba(255,255,255,0.2);
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.15);
     border: none;
     border-radius: 8px;
     color: white;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 15px;
+    transition: background 0.3s, transform 0.2s;
 }
 
 button:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.03);
 }
 
-/* a, feladat: lista styling */
+/* lista */
 ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .todo-item {
-    background: rgba(255,255,255,0.1);
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: white;
-    font-size: 16px;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 6px 0;
+    transition: all 0.4s ease;
 }
 
-/* b) feladat: torles gomb */
+.todo-item:hover {
+    background-color: #d32f2f;
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.todo-item .task-text {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.todo-item .btn-group {
+    margin-left: auto !important;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.todo-item > button:first-of-type {
+    margin-left: auto !important;
+}
+
+.btn-group button,
+.todo-item > button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
 .delete-btn {
     background-color: #f44336;
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 6px 12px;
+    font-size: 13px;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }

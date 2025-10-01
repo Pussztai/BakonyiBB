@@ -51,19 +51,28 @@
   </header>
 <body>
     <div class="container">
-        <h1>TODO Lista</h1>
-        
-        <!-- a, feladat: form a feladatok hozzaadasahoz -->
-        <form id="addTaskForm">
-            <input type="text" id="taskInput" placeholder="Új feladat..." required>
-            <button type="submit">Hozzáadás</button>
-        </form>
+    <h1>TODO Lista</h1>
+    
+    <!-- Új feladat hozzáadása -->
+    <form id="addTaskForm">
+        <input type="text" id="taskInput" placeholder="Új feladat..." required>
+        <button type="submit">Hozzáadás</button>
+    </form>
 
-        <!-- a, feladat: lista -->
-        <ul id="todoList"></ul>
+    <!-- Feladatok listája -->
+    <ul id="todoList">
+        <li class="todo-item">
+            <span class="task-text">Minta feladat</span>
+            <div class="btn-group">
+                <button class="up-btn">⬆️</button>
+                <button class="down-btn">⬇️</button>
+                <button class="delete-btn">❌</button>
+            </div>
+        </li>
+    </ul>
 
-        <div id="emptyState">Még nincsenek feladatok.</div>
-    </div>
+    <div id="emptyState"><h3>Még nincsenek feladatok.</h3></div>
+</div>
 
     <script src="script.js"></script>
 </body>
