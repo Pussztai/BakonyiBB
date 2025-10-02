@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBB | Bemutatkozó Weboldal</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/suli.png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Bemutatkozás</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../../index.html"
+                >Navigációs menü</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="../2/index.html">TODO-List</a>
+            </li>
+            <li class="nav-item ms-auto">
+              <div id="clock"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+      <div class="container py-5">
+        <h2 class="text-center mb-4">Csapattagok</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center h-100">
+                    <div class="card-body">
+                        <img
+                            class="competitor1Img img-fluid"
+                            src="images/Pusztai.png"
+                            alt="Attila"
+                        />
+                        <h5 class="card-title">Pusztai Attila</h5>
+                        <div class="bemutatkozás">
+                            <button id="toggleBtnAti" class="btn" aria-expanded="false">
+                                Bemutatkozás
+                            </button>
+                            <p id="AtiP" class="hidden">
+                              Imádok programozni és különböző problémákat megoldani, ahol szükséges a logikus gondolkodás. Különösen érdekel az AI fejlesztése és a valós problémák megoldására való alkalmazása.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center h-100">
+                    <div class="card-body">
+                        <img
+                            id="dave"
+                            class="competitor1Img img-fluid"
+                            src="images/david.png"
+                            alt="Dave"
+                        />
+                        <h5 class="card-title">Sós Dávid</h5>
+                        <div class="bemutatkozás">
+                            <button id="toggleBtnDave" aria-expanded="false">
+                                Bemutatkozás
+                            </button>
+                            <p id="DaveP" class="hidden">
+                              Főleg a kreativitásom miatt választottam ezt a területet, mert szeretek új megoldásokat találni összetett problémákra.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+                <div class="card shadow-sm text-center h-100">
+                    <div class="card-body">
+                        <img
+                            class="competitor1Img img-fluid"
+                            src="images/Dominik.png"
+                            alt="Dominik"
+                        />
+                        <h5 class="card-title">Kulás Dominik</h5>
+                        <div class="bemutatkozás">
+                            <button id="toggleBtnDomi" aria-expanded="false">
+                                Bemutatkozás
+                            </button>
+                            <p id="DomiP" class="hidden">
+                              Azért választottam a Szoftverfejlesztés szakirányt, mert már kiskorom óta érdekel ez a terület. Különösen a matematikai problémák.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+      
+
+      <section class="Tanarok">
+      <h2 class="text-center my-5">Felkészítő Tanárok</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm text-center h-100">
+            <div class="card-body">
+              <img
+                class="competitor1Img img-fluid"
+                src="images/fonokEman4.png"
+                alt="Eman"
+              />
+              <h5 class="card-title">Szabó Emánuel</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6">
+          <div class="card shadow-sm text-center h-100">
+            <div class="card-body">
+              <img
+                class="competitor1Img img-fluid"
+                src="images/FN.png"
+                alt="Norbi"
+              />
+              <h5 class="card-title">Farkas Norbert</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="vetites">
+      <button class="extraKepek">Nyomj ide Extra képekért</button>
+      <div id="kepHely" class="img-fluid"></div>
+      <h2 id="diaPictureDescription"></h2>
+    </div>
+
+
+      
+        
+      <div class="wrapper">
+        <div class="school-card">
+          <div class="strip" aria-hidden="true"></div>
+          <div class="info">
+            <h1>Ceglédi SZC <br> Közgazdasági és <br> Informatikai Technikum</h1>
+            <p>2700 Cegléd, Kossuth Ferenc utca 32.</p>
+          </div>
+          <div class="kep" aria-hidden="false">
+            <img src="images/suli.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+    <script src="script.js"></script>
+  </main>
+
+    
+    <footer>
+      <div class="container">
+        <div class="row5">
+          <div class="col-12">
+            <div class="table-responsive">
+              <table class="table border-4 customtab">
+                <thead class="">
+                  <tr>
+                    <th scope="col" colspan="2" class = "border-0 hatter" id="kapcsolat">Kapcsolatok</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    
+                    <td class="border-0 hatter">Kulás Dominik</td>
+                    <td class="border-0 hatter"><a href="https://github.com/coma112">Github<i class="bi bi-github"></i></a></td>
+                    
+                  </tr>
+                  <tr>
+                    <td class="border-0 hatter">Pusztai Attila</td>
+                    <td class="border-0 hatter"><a href="https://github.com/Pussztai">Github<i class="bi bi-github"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td class="border-0 hatter">Sós Dávid</td>
+                    <td class="border-0 hatter"><a href="https://github.com/SosDavidCkik">Github<i class="bi bi-github"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="border-0 text-center hatter">
+                      © 2025, Papírlyukasztók csapat
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
