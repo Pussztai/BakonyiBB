@@ -1,237 +1,264 @@
 :root {
-    --primary-gradient: linear-gradient(135deg, #238DCF 0%, #53EDB2 100%);
-    --icon-gradient: linear-gradient(135deg, #00619E 0%, #53ED58 100%);
-    --glass-bg: rgba(255, 255, 255, 0.15);
-    --glass-border: rgba(255, 255, 255, 0.2);
+  --primary-gradient: linear-gradient(135deg, #238dcf 0%, #53edb2 100%);
+  --icon-gradient: linear-gradient(135deg, #00619e 0%, #53ed58 100%);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--primary-gradient);
-    min-height: 100vh;
-    font-family: fantasy;
-    position: relative;
-    overflow-x: hidden;
-    padding: 2rem 0;
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  font-family: fantasy;
+  position: relative;
+  overflow-x: hidden;
+  padding: 2rem 0;
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-    animation: float 20s ease-in-out infinite;
-    pointer-events: none;
-    z-index: -1;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 40% 80%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    );
+  animation: float 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    33% { transform: translateY(-20px) rotate(1deg); }
-    66% { transform: translateY(-10px) rotate(-1deg); }
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-20px) rotate(1deg);
+  }
+  66% {
+    transform: translateY(-10px) rotate(-1deg);
+  }
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .main-card {
-    background: var(--glass-bg);
-    backdrop-filter: blur(15px);
-    border-radius: 25px;
-    border: 2px solid var(--glass-border);
-    box-shadow: 
-        0 25px 45px rgba(0, 0, 0, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    padding: 3rem 2rem;
-    margin: 2rem 0;
-    position: relative;
-    overflow: hidden;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .main-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--primary-gradient);
-    border-radius: 25px 25px 0 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary-gradient);
+  border-radius: 25px 25px 0 0;
 }
 
-h1, h2, h3 {
-    text-align: center;
-    color: white;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    margin-bottom: 1.5rem;
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    position: relative;
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  position: relative;
 }
 
 h1::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: var(--primary-gradient);
-    border-radius: 2px;
-    animation: pulse 2s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: var(--primary-gradient);
+  border-radius: 2px;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 h3 {
-    font-size: 1.3rem;
-    font-weight: 300;
-    opacity: 0.9;
-    margin-bottom: 3rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 3rem;
 }
 
 h2 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin: 3rem 0 2rem 0;
-    position: relative;
-    display: inline-block;
-    width: 100%;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 3rem 0 2rem 0;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(-10px); }
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px);
+  }
 }
 
 #gombok {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 #gombok button {
-    background: var(--glass-bg);
-    border: 2px solid var(--glass-border);
-    backdrop-filter: blur(10px);
-    color: white;
-    padding: 1.2rem 2rem;
-    border-radius: 15px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: var(--glass-bg);
+  border: 2px solid var(--glass-border);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 1.2rem 2rem;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 #gombok button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
 }
 
 #gombok button:hover::before {
-    left: 100%;
+  left: 100%;
 }
 
 #gombok button:hover {
-    transform: translateY(-5px) scale(1.02);
-    background: rgba(255, 255, 255, 0.25);
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px) scale(1.02);
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 #gombok button:active {
-    transform: translateY(-2px) scale(1.01);
+  transform: translateY(-2px) scale(1.01);
 }
 
 #gombok button:nth-child(1)::after {
-    font-family: "bootstrap-icons";
-    content: "\F433";
-    font-size: medium;
-    color: black;
-    margin-left: 10px;
+  font-family: "bootstrap-icons";
+  content: "\F433";
+  font-size: medium;
+  color: black;
+  margin-left: 10px;
 }
 
 #gombok button:nth-child(2)::after {
-    font-family: "bootstrap-icons";
-    content: "\F224";
-    font-size: medium;
-    color: black;
-    margin-left: 10px;
+  font-family: "bootstrap-icons";
+  content: "\F224";
+  font-size: medium;
+  color: black;
+  margin-left: 10px;
 }
 
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-    
-    .main-card {
-        padding: 2rem 1.5rem;
-        margin: 1rem 0;
-        border-radius: 20px;
-    }
-    
-    #gombok {
-        gap: 1rem;
-    }
-    
-    #gombok button {
-        padding: 1rem 1.5rem;
-        font-size: 1rem;
-    }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .main-card {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 20px;
+  }
+
+  #gombok {
+    gap: 1rem;
+  }
+
+  #gombok button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 1rem 0;
-    }
-    
-    h1 {
-        font-size: 2rem;
-    }
-    
-    .main-card {
-        padding: 1.5rem 1rem;
-        border-radius: 15px;
-    }
+  body {
+    padding: 1rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .main-card {
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+  }
 }

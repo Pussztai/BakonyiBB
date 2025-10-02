@@ -3,10 +3,9 @@
   --icon-gradient: linear-gradient(135deg, #00619e 0%, #53ed58 100%);
   --glass-bg: rgba(255, 255, 255, 0.15);
   --glass-border: rgba(255, 255, 255, 0.2);
-  --warm: linear-gradient(135deg, #FF6B6B 0%, #FF8787 100%, #FF7F50 0%);
+  --warm: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%, #ff7f50 0%);
 }
 
-/* NAVBAR */
 .navbar {
   background-color: white;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -20,7 +19,6 @@ img {
   display: none;
 }
 
-/* Clock */
 #clock {
   font-weight: 600;
   color: rgb(158, 59, 59);
@@ -68,15 +66,13 @@ img {
   width: 100%;
 }
 
-/* BODY */
 body {
   overflow-x: hidden;
   background: linear-gradient(135deg, #fdf6ec 0%, #fdf6ec 100%);
   min-height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* CARD */
 .card {
   background: white;
   border: none;
@@ -100,9 +96,6 @@ body {
 .card-body {
   padding: 2rem;
 }
-
-
-
 
 .competitor1Img {
   width: 160px;
@@ -162,7 +155,7 @@ h2 {
 }
 
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -173,8 +166,6 @@ h2 {
   animation: shimmer 3s ease-in-out infinite;
 }
 
-
-/*  CARD */
 @media (max-width: 768px) {
   .competitor1Img {
     width: 100px;
@@ -190,7 +181,6 @@ h2 {
   }
 }
 
-/* EXTRA KEPEK */
 .extraKepek {
   margin: 5% auto 0 auto;
   background: #f4e1c6;
@@ -218,7 +208,6 @@ h2 {
   image-rendering: pixelated;
 }
 
-/* SULI KEP */
 .vetites {
   display: flex;
   flex-direction: column;
@@ -244,7 +233,6 @@ h2 {
   }
 }
 
-
 .wrapper {
   margin: 10% auto;
   width: 100%;
@@ -269,8 +257,7 @@ h2 {
 }
 
 .info h1 {
-  margin: 0 0 .6rem 0;
-  /* font-size: cla; */
+  margin: 0 0 0.6rem 0;
   line-height: 1.05;
   font-weight: 700;
   color: #1f2937;
@@ -334,9 +321,6 @@ h2 {
   opacity: 0.95;
 }
 
-
-
-/* FOOTER */
 @media (max-width: 625px) {
   footer {
     overflow-x: auto;
@@ -369,12 +353,10 @@ h2 {
   margin-left: 25%;
 }
 
-/* TANAROK */
 .Tanarok {
   margin-top: 5%;
 }
 
-/* FOOTER STYLING */
 footer {
   margin-top: 3%;
   background-color: black;
@@ -417,35 +399,30 @@ footer td {
   font-weight: 600;
 }
 
-/* sorok */
 .customtab td {
   padding: 12px 30px;
   vertical-align: middle;
 }
 
-/* nevek */
 .customtab td:first-child {
   text-align: left;
   padding-right: 50px;
 }
 
-/* Github linkek */
 .customtab td:last-child {
   text-align: right;
   padding-left: 50px;
 }
 
 .hatter {
-  padding: 6px 200px !important; /* fixált, kisebb padding */
+  padding: 6px 200px !important; 
   white-space: normal;
 }
 
-/* Footer középre */
 footer {
   text-align: center;
 }
 
-/* Kapcsolatok középre */
 .customtab th {
   text-align: center !important;
   padding: 15px 30px;
